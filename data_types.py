@@ -130,3 +130,12 @@ heading = "Menu".upper()
 # print(myFav.endswith('har'))
 
 
+#! Boolean data type:
+myBoolValue = True
+boolvalue = bool(False)
+print(myBoolValue , ',', boolvalue)
+print(type(boolvalue))
+print(isinstance(boolvalue, bool))
+print(isinstance(boolvalue, str))
+print(isinstance(boolvalue, int))
+print(isinstance(10, int))

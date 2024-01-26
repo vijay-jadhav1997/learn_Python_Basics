@@ -43,7 +43,8 @@ decade = str(1990)
 # print(type(decade))
 
 statement = "I like classical music from the " + decade + "s."
-statement2 = f"I like classical music from the {decade}s." #* literal assignment
+#? Formatted Strings using syntax => f"It was {decade}s"
+statement2 = f"I like classical music from the {decade}s." #* Formatted Strings
 # print(statement)
 # print(statement2)
 
@@ -133,9 +134,55 @@ heading = "Menu".upper()
 #! Boolean data type:
 myBoolValue = True
 boolvalue = bool(False)
-print(myBoolValue , ',', boolvalue)
-print(type(boolvalue))
-print(isinstance(boolvalue, bool))
-print(isinstance(boolvalue, str))
-print(isinstance(boolvalue, int))
-print(isinstance(10, int))
+# print(myBoolValue , ',', boolvalue)
+# print(type(boolvalue))
+# print(isinstance(boolvalue, bool))
+# print(isinstance(boolvalue, str))
+# print(isinstance(boolvalue, int))
+# print(isinstance(10, int))
+
+#! Numeric data type:
+#? 1) integer type
+price = 100
+best_price = int(80)
+# print(price )
+# print(type(price))
+# print(isinstance(best_price, bool))
+# print(isinstance(price, str))
+# print(isinstance(best_price, int))
+# print(isinstance(10, int))
+
+#? 2) float type
+cgpa = 9.5
+best_cgpa = float(8.3)
+# print(cgpa )
+# print(type(cgpa))
+# print(isinstance(best_cgpa, bool))
+# print(isinstance(cgpa, float))
+# print(isinstance(best_cgpa, int))
+# print(isinstance(25.6, float))
+
+#? 3) complex type
+comp_value = 9+5j
+best_val = complex(8.3)
+# print(comp_value )
+# print(best_val )
+# print(type(comp_value))
+# print(isinstance(best_val, complex))
+# print(isinstance(comp_value, float))
+# print(isinstance(best_val, int))
+# print(isinstance(25.6+3j, complex))
+# print(comp_value.real)
+# print(comp_value.imag)
+
+#! 'Built-in functions' or 'methods' for numbers:
+#* 1) abs(argument): Return the absolute value (non-negative) of the argument.
+print(abs(cgpa))
+print(abs(cgpa * -1))
+
+#* 1) round(argument): Round a number to a given precision in decimal digits.The return value is an integer if ndigits is omitted or None. Otherwise the return value has the same type as the number. ndigits may be negative.
+print(round(cgpa))
+print(round(20.5467))
+print(round(20.2467))
+print(round(20.5467, 1))
+print(round(20.5467, 2))

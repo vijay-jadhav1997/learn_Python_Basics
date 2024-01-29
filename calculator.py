@@ -18,13 +18,31 @@
 #? formatting float
 # print(f"Sum =>  {result:,}")
 
+# def main():
+#   num = round(float(input("Enter a integer number => ")))
+#   print(f"Square of number {num} is {suare(num)}")
+
+
+# def suare(n):
+#   return pow(n, 2)
+
+
+# main()
+
+# define main Function
 def main():
-  num = round(float(input("Enter a integer number => ")))
-  print(f"Square of number {num} is {suare(num)}")
+    greeting = input("Greeting: ").strip().lower()
 
+    howGreeting(greeting)
 
-def suare(n):
-  return pow(n, 2)
+# define howGreeting Fn
+def howGreeting(greet):
+    if greet.startswith('hello'):
+        print("$0")
+    elif greet.startswith('h'):
+        print("$20")
+    else:
+        print("$100")
 
-
+# call main Fn at the end
 main()

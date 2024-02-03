@@ -1,102 +1,75 @@
-# 💥 I'm Learning Python 🐍
+# 👨🏻‍💻 I'm Learning Python 🐍
 
-### 🔆 Concepts to learn Python
+### 🔆 Table of Contents 📝
 
-1. Syntax
-
-   - Statements, Indentation, and Comments
-   - Variables and Data Types:
-     - Numbers
-     - Strings
-     - Booleans
-   - Variable Scope
-   - Identifiers
-   - Namespace and Scope
-   - Operators
-     - Bitwise
-     - Comparison
-     - Precedence
-     - Slicing
-     - Ternary
-
-2. Data Structures
-   - Lists
+1. Getting Started
+   - What is Python
+   - Python Syntax
+   - Variables
+2. Operators
+   - Arithmetic Operators (+, -, \_, /, //, %, \*\*)
+   - Bitwise Operators (&, |, ^, >>, <<, ~)
+   - Assignment Operators (=, +=, -=, /=, //= etc.)
+   - Comparison Operator (==, !=, >, <, >=, <=)
+   - Logical Operators (and, or, not)
+   - Identity Operators (is, is not)
+   - Membership Operators (in, not in)
+3. Data Types
+   - Numbers (including booleans)
+   - Strings and their methods
+   - Lists and their methods (including list comprehensions)
    - Tuples
+   - Sets and their methods
    - Dictionaries
-   - Sets
-   - Comprehensions
-3. Decision Making
-   - Switch
-4. Loops:
+   - Type Casting
+4. Control Flow
+   - The if statement
+   - The for statement (and range() function)
+   - The while statement
+   - The try statements
+   - The break statement
+   - The continue statement
+5. Functions
+   - Function Definition (def and return statements)
+   - Scopes of Variables Inside Functions (global and nonlocal statements)
+   - Default Argument Values
+   - Keyword Arguments
+   - Arbitrary Argument Lists
+   - Unpacking Argument Lists (\_ and \*\* statements)
+   - Lambda Expressions (lambda statement)
+   - Documentation Strings
+   - Function Annotations
+   - Function Decorators
+6. Classes
+   - Class Definition (class statement)
+   - Class Objects
+   - Instance Objects
+   - Method Objects
+   - Class and Instance Variables
+   - Inheritance
+   - Multiple Inheritance
+7. Modules
+   - Modules (import statement)
+   - Packages
+8. Errors and Exceptions
+   - Handling Exceptions (try statement)
+   - Raising Exceptions (raise statement)
+9. Files
+   - Reading and Writing (with statement)
+   - Methods of File Objects
+10. Additions
 
-5. Functions:
+    - The pass statement
+    - Generators (yield statement)
 
-   - Built-in functions
-   - range(), zip(), eval(), exec(), repr()
-   - Function arguments
-   - Recursion
-   - Lambda expressions
+11. Brief Tour of the Standard Libraries
 
-6. Object-Oriented
-   - Classes and Objects
-   - Methods
-   - Inheritance and types
-   - Operator overloading
-   - property class
-   - Shallow and deep copying
-7. Modules:
-   - os, pprint, sys, array, itertools
-   - Counter, defaultdict, OrderedDict, namedtuple
-   - datetime, calendar
-8. Packages
-9. Working with files
-   - Read/Write
-   - Copying, Renaming, Zipping
-10. Iterators:
-    - Generators
-    - Closure
-11. Decorators:
-12. Assert statements
-13. Errors and Exceptions
-14. Exception handling
-15. XML processing, sending email, networking
-16. GUI programming in Python
-17. Python Multithreading and multiprocessing
-18. Regular Expressions in Python
-19. Accessing database with Python
-20. Logging, unit testing
-21. Virtual Environments
-22. Serialization
-23. Libraries
-    - scipy
-    - numpy
-    - Image processing
-    - Matplotlib
-    - pandas
-24. Frameworks
+    - Serialization (json library)
+    - File Wildcards (glob library)
+    - String Pattern Matching (re library)
+    - Mathematics (math, random, statistics libraries)
+    - Dates and Times (datetime library)
+    - Data Compression (zlib library)
 
-- Django
-- Flask
-
-### Flavors of Python
-
-Python has more than one implementation. We use CPython, others are:
-
-- CPython- Written in C
-- Jython- Written in Java
-- IronPython- Implemented in C#
-- Brython- Browser Python
-- RubyPython- Bridge between Python and Ruby interpreters
-- PyPY- Implemented in Python
-- MicroPython- Runs on a microcontroller
-
-### e. File Extensions
-
-Python files may have one of the following extensions:
-
-- .py
-- .pyc
-- .pyd
-- .pyo
-- .pyw
-- .pyz
+12. User input
+    - Terminal input (input statement)

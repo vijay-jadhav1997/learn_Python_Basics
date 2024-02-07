@@ -131,81 +131,82 @@ def string_operators():
   and repeated with *: 3 times 'un', followed by 'ium'
   """
 
-  assert 3 * 'un' + 'ium' == 'unununium'
+  print(3 * 'Har ' + 'Mahadev')  # Output: Har Har Har Mahadev
 
   # 'Py' 'thon'
-  python = 'Py' 'thon'
-  assert python == 'Python'
+  word = 'Py' 'thon'
+  print(word) # Output: 'Python'
 
   # This feature is particularly useful when you want to break long strings:
   text = (
       'Put several strings within parentheses '
       'to have them joined together.'
   )
-  assert text == 'Put several strings within parentheses to have them joined together.'
+  print(text) # Output: Put several strings within parentheses to have them joined together.
 
   # If you want to concatenate variables or a variable and a literal, use +:
   prefix = 'Py'
-  assert prefix + 'thon' == 'Python'
+  print(prefix + 'thon') # Output: 'Python'
 
 
-def test_string_methods():
+def string_methods():
   """String methods"""
 
-  hello_world_string = "Hello, World!"
+  greeting_string = "Jay Jay Shree Radhe"
 
   # The strip() method removes any whitespace from the beginning or the end.
-  string_with_whitespaces = " Hello, World! "
-  assert string_with_whitespaces.strip() == "Hello, World!"
+  string_with_whitespaces = " Jay Maa Bharati! "
+  print(string_with_whitespaces.strip()) # Output: Jay Maa Bharati!
 
   # The len() method returns the length of a string.
-  assert len(hello_world_string) == 13
+  print(len(greeting_string)) # Output: 19
 
   # The lower() method returns the string in lower case.
-  assert hello_world_string.lower() == 'hello, world!'
+  print(greeting_string.lower()) == 'jay jay rhree radhe'
 
   # The upper() method returns the string in upper case.
-  assert hello_world_string.upper() == 'HELLO, WORLD!'
+  print(greeting_string.upper()) == 'JAY JAY SHREE RADHE'
 
   # The replace() method replaces a string with another string.
-  assert hello_world_string.replace('H', 'J') == 'Jello, World!'
+  print(greeting_string.replace('Radhe', 'Ram')) # Output: Jay Jay Shree Ram
 
-  # The split() method splits the string into substrings if it finds instances of the separator.
-  assert hello_world_string.split(',') == ['Hello', ' World!']
+  # The split() method splits the string into substrings if it finds instances of the separator and return new list.
+  print(greeting_string.split(" ")) # Output: ["Jay", "Jay", "Shree", "Radhe"]
 
   # Converts the first character to upper case
-  assert 'low letter at the beginning'.capitalize() == 'Low letter at the beginning'
+  print('upper case letter at the beginning'.capitalize()) #Output: 'Upper case letter at the beginning'
 
   # Returns the number of times a specified value occurs in a string.
-  assert 'low letter at the beginning'.count('t') == 4
+  print('count the \'t\' character in the sentense'.count('t')) # Output: 6
 
   # Searches the string for a specified value and returns the position of where it was found.
-  assert 'Hello, welcome to my world'.find('welcome') == 7
+  print("Jay Jay Ram Krushna Hari Vitthal Keshava".find('Vitthal')) # Output: 25
 
   # Converts the first character of each word to upper case
-  assert 'Welcome to my world'.title() == 'Welcome To My World'
-
-  # Returns a string where a specified value is replaced with a specified value.
-  assert 'I like bananas'.replace('bananas', 'apples') == 'I like apples'
+  print('Shree ram jay ram jay jay ram'.title()) # Output: Shree Ram Jay Ram Jay Jay Ram
 
   # Joins the elements of an iterable to the end of the string.
-  my_tuple = ('John', 'Peter', 'Vicky')
-  assert ', '.join(my_tuple) == 'John, Peter, Vicky'
+  my_tuple = ('Mohan', 'Sham', 'Madhav')
+  print(', '.join)(my_tuple) # Output: 'Mohan, Sham, Madhav'
+  my_list = ['Mohan', 'Sham', 'Madhav']
+  print('_'.join)(my_list) # Output: 'Mohan_Sham_Madhav'
 
   # Returns True if all characters in the string are upper case.
-  assert 'ABC'.isupper()
-  assert not 'AbC'.isupper()
+  print('NARAYAN'.isupper()) # Output: True
+  print(not 'Govind'.isupper()) # Output: True
 
   # Check if all the characters in the text are letters.
-  assert 'CompanyX'.isalpha()
-  assert not 'Company 23'.isalpha()
+  print('JayShreeGanesh'.isalpha()) # Output: True
+  print(not 'Jay Shree Ganesh 23'.isalpha()) # Output: True
 
   # Returns True if all characters in the string are decimals.
-  assert '1234'.isdecimal()
-  assert not 'a21453'.isdecimal()
+  print('1234'.isdigit(), '1234'.isdecimal()) # output: True
+  print(not 'Abc21453'.isdigit(), not 'Abc21453'.isdecimal()) # output: True 
+  print('Abc21453'.isdigit(), 'Abc21453'.isdecimal()) # output: False (contain 'Abc')
+  print('21.453'.isdigit(), '21.453'.isdecimal()) # output: False  (contains a dot '.')
 
 
-def test_string_formatting():
+def string_formatting():
   """String formatting.
 
   Often you’ll want more control over the formatting of your output than simply printing
@@ -218,7 +219,7 @@ def test_string_formatting():
   year = 2018
   event = 'conference'
 
-  assert f'Results of the {year} {event}' == 'Results of the 2018 conference'
+  print(f'Results of the {year} {event}') # Output: 'Results of the 2018 conference'.
 
   # The str.format() method of strings requires more manual effort. You’ll still use { and } to
   # mark where a variable will be substituted and can provide detailed formatting directives,
@@ -227,7 +228,7 @@ def test_string_formatting():
   no_votes = 43_132_495   # equivalent of 43132495
   percentage = yes_votes / (yes_votes + no_votes)
 
-  assert '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage) == ' 42572654 YES votes  49.67%'
+  print('{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)) # Output: ' 42572654 YES votes  49.67%'
 
   # When you don’t need fancy output but just want a quick display of some variables for debugging
   # purposes, you can convert any value to a string with the repr() or str() functions. The str()
@@ -248,7 +249,7 @@ def test_string_formatting():
   print(str(1/7)) # Output: '0.14285714285714285'
 
   # The argument to repr() may be any Python object:
-  assert repr((first_num, second_num, ('spam', 'eggs'))) == "(32.5, 40000, ('spam', 'eggs'))"
+  print(repr((first_num), second_num, ('spam', 'eggs'))) # Output: "(32.5, 40000, ('spam', 'eggs'))"
 
   #? Formatted String Literals:
   #* Formatted string literals (also called f-strings for short) let you include the value of
@@ -268,18 +269,18 @@ def test_string_formatting():
   for name, phone in table_data.items():
     ustable_string += f'{name:7}==>{phone:7d}'
 
-  assert table_string == ('Sjoerd ==>   4127' 'Jack   ==>   4098' 'Dcab   ==>   7678')
+  print(table_string) # ('Sjoerd ==>   4127' 'Jack   ==>   4098' 'Dcab   ==>   7678')
 
   # The String format() Method
 
   # Basic usage of the str.format() method looks like this:
-  assert 'We are {} who say "{}!"'.format('knights', 'Ni') == 'We are knights who say "Ni!"'
+  print('We are {} who say "{}!"'.format('knights', 'Ni')) # 'We are knights who say "Ni!"'
 
   # The brackets and characters within them (called format fields) are replaced with the objects
   # passed into the str.format() method. A number in the brackets can be used to refer to the
   # position of the object passed into the str.format() method
-  assert '{0} and {1}'.format('spam', 'eggs') == 'spam and eggs'
-  assert '{1} and {0}'.format('spam', 'eggs') == 'eggs and spam'
+  print('{0} and {1}'.format('spam', 'eggs')) # 'spam and eggs'
+  print('{1} and {0}'.format('spam', 'eggs')) # 'eggs and spam'
 
   # If keyword arguments are used in the str.format() method, their values are referred to by
   # using the name of the argument.
@@ -288,7 +289,7 @@ def test_string_formatting():
       adjective='absolutely horrible'
   )
 
-  assert formatted_string == 'This spam is absolutely horrible.'
+  print(formatted_string) # 'This spam is absolutely horrible.'
 
   # Positional and keyword arguments can be arbitrarily combined
   formatted_string = 'The story of {0}, {1}, and {other}.'.format(
@@ -297,7 +298,7 @@ def test_string_formatting():
       other='Georg'
   )
 
-  assert formatted_string == 'The story of Bill, Manfred, and Georg.'
+  print(formatted_string) # 'The story of Bill, Manfred, and Georg.'
 
   # If you have a really long format string that you don’t want to split up, it would be nice if
   # you could reference the variables to be formatted by name instead of by position. This can be
@@ -306,7 +307,7 @@ def test_string_formatting():
   table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
   formatted_string = 'Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; Dcab: {0[Dcab]:d}'.format(table)
 
-  assert formatted_string == 'Jack: 4098; Sjoerd: 4127; Dcab: 8637678'
+  print(formatted_string) # 'Jack: 4098; Sjoerd: 4127; Dcab: 8637678'
 
   # This could also be done by passing the table as keyword arguments with the ‘**’ notation.
   formatted_string = 'Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table)

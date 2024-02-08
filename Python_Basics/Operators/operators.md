@@ -145,6 +145,10 @@ we will learn about bitwise operators later.
 
 ### 4. Comparison Operator:
 
+> - There are six comparison operators in Python (<,>,<=,>=,==,!=)
+> - Comparison operators are binary in nature, requiring two operands.
+> - An expression involving a comparison operator is called a Boolean expression, and always returns either True or False.
+
 These comparison operators are commonly used in conditional statements (if, elif, else) and other contexts where we need to check the relationship between two values.
 
 - **Equal to (==) :** Returns True if the values on both sides are equal.
@@ -190,6 +194,8 @@ These comparison operators are commonly used in conditional statements (if, elif
     print(20 <= 10) # Output: False
   ```
 
+---
+
 ### 5. Logical Operators:
 
 - **'and' Operator:** Returns True if both operands are true; otherwise, it returns False.
@@ -217,25 +223,21 @@ These comparison operators are commonly used in conditional statements (if, elif
     print(False or False) # outpu: False
   ```
 
-  ```
-
-  ```
-
 - **'not' Operator:** Returns the opposite of the operand's boolean value. If the operand is True, not returns False; if the operand is False, not returns True.
-  - True and True => True
-  - True and False => True
-  - False and True => True
-  - False and False => False
+  - not True => False
+  - not False => True
   ```py
     print(not True) # outpu: False
     print(not False) # outpu: True
   ```
 
+---
+
 ### 6. Identity Operators:
 
 Identity operators in Python are used to compare the memory addresses of two objects. They check whether two variables reference the same object in memory.
 
-- **'is' Operator:** Returns True if both operands refer to the same object in memory; otherwise, it returns False.
+- **'is' Operator:** The "in" operator evaluates to True if both the operand objects share the same memory location. Otherwise, False.
 
   ```py
   list1 = ["Jay", "Hari", "Radhe", "Gopal"]
@@ -263,6 +265,8 @@ Identity operators in Python are used to compare the memory addresses of two obj
   if list1 is not list2:
     print("Both variables do not reference the same list, even though they contain same values/elements.")
   ```
+
+---
 
 ### 7. Membership Operators :
 
@@ -301,3 +305,5 @@ Membership operators in Python are used to test whether a value is a member of a
   else:
     print("Sorry, this email is blocked.")
 ```
+
+---

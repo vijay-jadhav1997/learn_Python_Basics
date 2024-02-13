@@ -74,6 +74,10 @@
 12. User input
     - Terminal input (input statement)
 
+---
+
+> > Python is a highly object-oriented language. In fact, virtually every item of data in a Python program is an object of a specific type or class.
+
 ### Python Syntax :
 
 1. **Python Identifiers** : In Python, an identifier is a name used to identify a **_variable, function, class, module, or any other object_**. Identifiers/variables are used to uniquely name entities in a program.

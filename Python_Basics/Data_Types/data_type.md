@@ -89,12 +89,36 @@ There are three numeric types in Python:
   # constructor function:
   comp_num = complex(3+2j)
 
-  print(comp_num.real)
-  print(comp_num.imag)
+  print(comp_num.real) # op: 3.0
+  print(comp_num.imag) # op: 2.0
 
   result = complex_num1 * complex_num2
   print(result) # Output: 44 + 6j
   ```
+
+  **_Built-in Functions for Number :_**
+
+  1. **_abs(number)_** : returns the absolute value of a given number. The result is always a non-negative value.
+
+  ```py
+    print(abs(-20)) # OP: 20
+    print(abs(-5.5)) # OP: 5.5
+    print(abs(101.9)) # OP: 101.9
+  ```
+
+  2. **round(number, n)\_** : round a floating-point number to a specified number of decimal places or to the nearest integer.
+
+  ```py
+    print(round(20.553, 2)) # OP: 20.55
+    print(round(20.553)) # OP: 21
+    print(round(5.6, 2)) # OP: 5.6
+    print(round(1234, -2)) # OP: 1200
+    print(round(1264, -2)) # OP: 1300
+    print(round(1224, -3)) # OP: 1000
+    print(round(1724, -3)) # OP: 2000
+  ```
+
+---
 
 ## Python Sequence Data Type:
 

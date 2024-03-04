@@ -1,5 +1,12 @@
 ## ✨ Learn Object Oriented Programming 💥
 
+1. class (Ex, Student)
+2. Instance of class (Ex, `viju = Student(name, age, std, roll_num)` here `viju` is a instance of the Student class )
+3. Instance attributes/variables and class attributes
+4. dunder methods (Ex, `.__init__()` & ` .__str__()`)
+5. Instance methods (Ex, `.greet()`)
+6. Inheritance
+
 ### **Classes vs Instances** :
 
 - **_Classes_** allow we to create **user-defined** **_data structures_**.
@@ -153,12 +160,18 @@ class Employee:
 ```py
   class Parent:
     hair_color = "black"
+    speak = ["Marathi"]
 
   class Child(Parent):
-    pass
+    speak = ["Marathi", "Hindi"] # Here, we have overridden the speak attribute, (Not a best practice...)
 
-  print(Child.hair_color) # op: black
+  print(parent.hair_color) # op: black
+  print(child.hair_color) # op: black
   # Because child classes take on the attributes and methods of parent classes, Child.hair_color is also "black" without our explicitly defining that
+
+  print(parent.speak)   # op : ["Marathi"]
+  print(child.speak)  # op : ["Marathi", "Hindi"]
+  # Because in Child class we overridden the speak attribute, (It is said to be bad practice ❌)
 ```
 
 - Child classes can override or extend the attributes and methods of parent classes.
@@ -167,11 +180,19 @@ class Employee:
 ```py
   class Parent:
     languages_speak = ["Marathi"]
+    #......
+    def speak(self, language):
+      return f"I speak {languages_speak[0]}"
 
   class Child(Parent):
     languages_speak = ["Marathi", "Hindi", "English"]
+    #.....
+    def speak(self, language="Sanskrut")
+      return super().speak(language)
 
   child = Child()
   print(Child.languages_speak) # op: ["Marathi", "Hindi", "English"]
   # Because child classes take on the attributes and methods of parent classes, Child.hair_color is also "black" without our explicitly defining that
 ```
+
+> All objects created from a child class are instances of the parent class,
